@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-surface: #181c1c;
+  --color-outline: #717974;
+  --color-error-container: #ffdad6;
+  --color-secondary-fixed-dim: #bbcac2;
+  --color-tertiary-fixed-dim: #f0b9b4;
+  --color-surface-container: #ebeeed;
+  --color-on-primary-fixed: #002117;
+  --color-tertiary: #5b3532;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-container: #5a6761;
+  --color-primary: #244539;
+  --color-inverse-surface: #2d3131;
+  --color-on-tertiary: #ffffff;
+  --color-surface: #f7faf9;
+  --color-secondary: #54615b;
+  --color-surface-variant: #e0e3e2;
+  --color-on-tertiary-fixed: #301310;
+  --color-on-error-container: #93000a;
+  --color-on-primary-fixed-variant: #2b4d41;
+  --color-on-surface-variant: #414845;
+  --color-surface-container-highest: #e0e3e2;
+  --color-on-tertiary-fixed-variant: #633d39;
+  --color-on-primary-container: #afd4c4;
+  --color-secondary-container: #d7e6de;
+  --color-surface-container-high: #e6e9e8;
+  --color-error: #ba1a1a;
+  --color-on-tertiary-container: #f6bfba;
+  --color-inverse-primary: #aacfbe;
+  --color-outline-variant: #c1c8c3;
+  --color-primary-container: #3b5d50;
+  --color-on-secondary-fixed-variant: #3c4a44;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-container: #754c48;
+  --color-on-secondary-fixed: #111e19;
+  --color-on-error: #ffffff;
+  --color-tertiary-fixed: #ffdad6;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary-fixed-dim: #aacfbe;
+  --color-secondary-fixed: #d7e6de;
+  --color-surface-container-low: #f1f4f3;
+  --color-surface-dim: #d7dbda;
+  --color-primary-fixed: #c5ebda;
+  --color-on-background: #181c1c;
+  --color-surface-bright: #f7faf9;
+  --color-surface-tint: #436558;
+  --color-inverse-on-surface: #eef1f0;
+  --color-background: #f7faf9;
+
+  --font-brand: "Sacramento", cursive;
+  --font-body: "Poiret One", system-ui;
+  --font-headline: "Questrial", sans-serif;
+  --font-label: "Questrial", sans-serif;
+
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .signature-font {
+    font-family: var(--font-brand) !important;
+  }
+}
+
+@layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .editorial-underline {
+    position: relative;
+  }
+  .editorial-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Questrial&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
